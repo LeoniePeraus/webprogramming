@@ -12,12 +12,395 @@
         <h1 class="text-center my-4">Memory Game</h1>
         <div id="game-board" class="row justify-content-center">
             <!-- Card elements will go here -->
+            <div class="col card" id="tree1" onclick="{
+                    if(tree1.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            tree1.style.backgroundColor = colorGreen;
+                            tree1.textContent = 'tree';
+                            tmpVisibleCards.push(tree1);
+                        }
+                        
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+                                    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+                                
+                                tmpVisibleCards = [];
+                            }
+                        }
+                        
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="sky1" onclick="{
+                    if(sky1.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            sky1.style.backgroundColor = colorGreen;
+                            sky1.textContent = 'sky';
+                            tmpVisibleCards.push(sky1);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+                                
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="tree2" onclick="{
+                    if(tree2.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            tree2.style.backgroundColor = colorGreen;
+                            tree2.textContent = 'tree';
+                            tmpVisibleCards.push(tree2);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+    
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="sky2" onclick="{
+                    if(sky2.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            sky2.style.backgroundColor = colorGreen;
+                            sky2.textContent = 'sky';
+                            tmpVisibleCards.push(sky2);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+    
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="flower1" onclick="{
+                    if(flower1.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            flower1.style.backgroundColor = colorGreen;
+                            flower1.textContent = 'flower';
+                            tmpVisibleCards.push(flower1);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+    
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="flower2" onclick="{
+                    if(flower2.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            flower2.style.backgroundColor = colorGreen;
+                            flower2.textContent = 'flower';
+                            tmpVisibleCards.push(flower2);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+    
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="sun1" onclick="{
+                    if(sun1.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            sun1.style.backgroundColor = colorGreen;
+                            sun1.textContent = 'sun';
+                            tmpVisibleCards.push(sun1);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+    
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
+            <div class="col card" id="sun2" onclick="{
+                    if(sun2.innerText === '?') {
+                        if(tmpVisibleCards.length < 2) {
+                            sun2.style.backgroundColor = colorGreen;
+                            sun2.textContent = 'sun';
+                            tmpVisibleCards.push(sun2);
+                        }
+    
+                        if(tmpVisibleCards.length == 2) {
+                            if(tmpVisibleCards[0].textContent !== tmpVisibleCards[1].textContent) {
+                                setTimeout(function() {
+                                    tmpVisibleCards[0].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[0].textContent = '?';
+                                    tmpVisibleCards[1].style.backgroundColor = colorBlue;
+                                    tmpVisibleCards[1].textContent = '?';
+    
+                                    tmpVisibleCards = [];
+                                }, waitMillisec);
+                            } else {
+                                allVisibleCards.push(tmpVisibleCards[0]);
+                                allVisibleCards.push(tmpVisibleCards[1]);
+    
+                                tmpVisibleCards = [];
+                            }
+                        }
+    
+                        if(allVisibleCards.length == numOfCards) {
+                            let message = document.createElement('h3');
+                            message.textContent = 'Congratulation! You finished the memory!';
+                            message.style.textAlign = 'center';
+                            document.body.appendChild(message);
+    
+                            let newRound = document.createElement('button');
+                            newRound.textContent = 'new round';
+                            newRound.onclick = () => window.location.reload();
+                            newRound.style.display = 'block';
+                            newRound.style.margin = 'auto';
+                            newRound.classList.add('btn', 'btn-primary'); // bootstrap classes
+                            document.body.appendChild(newRound);
+                        }
+                    }
+                }">
+                <div class="card-body">
+                    <p class="card-text">?</p>
+                </div>
+            </div>
         </div>
     </div>
     <script>
         // Place script code here
-        // test test test
-        let test;
+        let tree1 = document.getElementById('tree1');
+        let tree2 = document.getElementById('tree2');
+        let sky1 = document.getElementById('sky1');
+        let sky2 = document.getElementById('sky2');
+        let flower1 = document.getElementById('flower1');
+        let flower2 = document.getElementById('flower2');
+        let sun1 = document.getElementById('sun1');
+        let sun2 = document.getElementById('sun2');
+
+        let tmpVisibleCards = [];
+        let allVisibleCards = [];
+
+        let colorGreen = '#28a745';
+        let colorBlue = '#007bff';
+
+        let waitMillisec = 2000;
+        let numOfCards = 8;
     </script>
 </body>
 </html>
