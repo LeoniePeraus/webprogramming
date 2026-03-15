@@ -1,0 +1,17 @@
+.key {
+    background-color: white;
+    border: 3px solid black;
+    height: 20em;
+    width: 5em;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.key:active {
+    background-color: lightgrey;
+}
+
+button.pressed {
+    background-color: lightgrey;
+}
