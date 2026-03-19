@@ -37,15 +37,23 @@
         </ul>
         <div id="piano" class="d-flex justify-content-center">
             <!-- Piano keys with IDs for JavaScript interaction -->
-            <div class="key" id="keyC">C</div>
-            <div class="key" id="keyD">D</div>
-            <div class="key" id="keyE">E</div>
-            <div class="key" id="keyF">F</div>
-            <div class="key" id="keyG">G</div>
-            <div class="key" id="keyA">A</div>
-            <div class="key" id="keyB">B</div>
+            <button class="key" id="C">C</button>
+            <button class="key" id="D">D</button>
+            <button class="key" id="E">E</button>
+            <button class="key" id="F">F</button>
+            <button class="key" id="G">G</button>
+            <button class="key" id="A">A</button>
+            <button class="key" id="B">B</button>
         </div>
-        <button id="reset-notes" class="btn btn-danger mt-2">Reset Note Line</button>
+        <div id="note-line" class="mt-4">
+            <div id="noteLine"></div>
+        </div>
+        <button type="button" class="btn btn-primary" id="theme1">Load Theme 1</button>
+        <button type="button" class="btn btn-primary" id="theme2">Load Theme 2</button>
+        <button type="button" class="btn btn-primary" id="theme3">Load Theme 3</button>
+        <button type="button" class="btn btn-success" id="play">Play</button>
+        <button type="button" class="btn btn-danger" id="reset">Reset</button>
+        <!-- <button id="reset-notes" class="btn btn-danger mt-2">Reset Note Line</button> -->
     </div>
     <script src="dist/script.js"></script>
 </body>

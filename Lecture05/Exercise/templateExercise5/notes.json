@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Twinkle Twinkle Little Star",
+        "notes": ["C", "C", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "C"]
+    },
+    {
+        "title": "Tonleiter",
+        "notes": ["C", "D", "E", "F", "G", "A", "B"]
+    },
+    {
+        "title": "Alle meine Entchen",
+        "notes": ["C", "D", "E", "F", "G", "G", "A", "A", "A", "A", "G"]
+    }
+]
