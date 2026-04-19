@@ -2,6 +2,10 @@ body {
   background-color: #f8f9fa;
 }
 
+#settings div {
+  margin: 10px;
+}
+
 #game-board {
   display: grid;
   grid-template-columns: repeat(4, 100px);
@@ -22,7 +26,15 @@ body {
   user-select: none;
 }
 
-.matched {
+.card.flipped {
+  background-color: white;
+}
+
+.card.matched {
   background-color: #28a745;
 }
 
+.active-player {
+  font-weight: bold;
+  color: red;
+}
