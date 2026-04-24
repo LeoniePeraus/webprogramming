@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messenger App (Week 8)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Messenger (Week 8)</h1>
+  <div id="chat-container">
+    <h2>Register (Task 1)</h2>
+    <form id="registerForm" method="POST">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div>
+        <label for="group_id">Group ID:</label>
+        <input type="text" id="group_id" name="group_id">
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <!-- Registration successful! New user ID: 1155 -->
+    <div id="registerMessage"></div>
+
+    <h2>Login (Task 2)</h2>
+    <form id="loginForm" method="POST">
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <!-- Login successful! Token: -->
+    <div id="loginMessage"></div>
+
+    <h2>Get Users (Task 3)</h2>
+    <form id="usersForm" method="POST">
+      <button type="submit">Get Users</button>
+    </form>
+    <!-- Display successful! -->
+    <div id="usersDisplay"></div>
+
+    <h2>Send Message (Task 4)</h2>
+    <p>Send a message to User z (ID: 1723)</p>
+    <form id="messageForm" method="POST">
+      <div>
+        <textarea id="message" name="message" rows="5" cols="30"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+    <!-- Message successfully sent! -->
+    <div id="messageInfo"></div>
+  </div>
+
+  <script type="module" src="../dist/main.js"></script>
+</body>
+</html>
