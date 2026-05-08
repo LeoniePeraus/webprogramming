@@ -1,0 +1,9 @@
+<h1>Message-List</h1>
+
+<div>
+    @for (msg of messages; track $index) {
+        <div>
+            <strong>{{ msg.sender }}</strong>: {{ msg.content }}
+        </div>
+    }
+</div>
