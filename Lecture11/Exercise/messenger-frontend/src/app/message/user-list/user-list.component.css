@@ -1,0 +1,7 @@
+#userList div {
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
+#userList div:hover {
+    background-color: lightskyblue;
+}

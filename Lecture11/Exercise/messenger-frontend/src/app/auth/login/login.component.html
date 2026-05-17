@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Login</h2>
+
+    @if (!loginStatus().loggedIn) {
+        <div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username </label>
+                <input type="text" id="username" class="form-control" name="username" [(ngModel)]="username">
+            </div>
+            
+            <div class="mb-3">
+                <label for="password" class="form-label">Password </label>
+                <input type="password" id="password" class="form-control" name="password" [(ngModel)]="password">
+            </div>
+            
+            <button class="btn btn-primary w-100" [disabled]="!username || !password" (click)="login()">Login</button>
+        </div>
+    }
+
+    @if (loginStatus().loginError != "") {
+        <div class="alert alert-warning" role="alert">Login failed! Error: {{ loginStatus().loginError }}</div>
+    }
+
+    @if (loginStatus().loggedIn) {
+        You're logged in as {{ loginStatus().username }} (ID: {{ loginStatus().id }})
+        <p>Hello {{ loginStatus().username }}!</p>
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+    }
+</div>

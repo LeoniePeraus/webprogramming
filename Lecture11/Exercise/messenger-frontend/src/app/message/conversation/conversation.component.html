@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="conversation vh-100 d-flex flex-column">
+        <div class="d-flex justify-content-between">
+            <h2>Chat</h2>
+
+            @if (selectedUser) {
+                <button class="btn btn-outline-secondary" (click)="loadConversation()">
+                    <i class="bi bi-arrow-clockwise"></i>
+                </button>
+            }
+        </div>
+
+        @if (isLoading()) {
+            <div>Loading...</div>
+        }
+
+        @if (error()) {
+            <p>{{ error() }}</p>
+        }
+
+        @if (selectedUser) {
+            <div class="py-2" id="chat-partner">
+                {{ selectedUser.name }}
+            </div>
+        } @else {
+            <p>Select a user to start chatting!</p>
+        }
+
+        <div class="flex-grow-1 overflow-auto" id="chat-messages">
+            @for (message of messages(); track $index) {
+                @if($index == 0 || isNewDay(messages()[$index-1].timestamp, message.timestamp)) {
+                    <div class="date-seperator">
+                        <div class="date-item">{{ formatDate(message.timestamp) }}</div>
+                    </div>
+                }
+
+                <div class="messageLine pb-1"
+                    [class.sent]="message.sender_id === currentUserId"
+                    [class.received]="message.sender_id !== currentUserId">
+                    
+                    <div class="bubble">
+                        <div>{{ message.message }}</div>
+                        <div class="timestamp">{{ formatTime(message.timestamp) }}</div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @if (selectedUser) {
+            <div class="newMessage py-2">
+                <div class="input-group">
+                    <input type="text" id="newMessage" class="form-control"
+                            name="newMessage" placeholder="Write something..." [(ngModel)]="newMessage">
+                    <button class="btn btn-primary" [disabled]="!newMessage" (click)="sendMessage()">Send</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

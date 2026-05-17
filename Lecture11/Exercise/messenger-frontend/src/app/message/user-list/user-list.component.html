@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="user-list vh-100 d-flex flex-column">
+        <h2>All Users</h2>
+
+        @if (error()) {
+            <p>Error: {{ error() }}</p>
+        }
+
+        <div class="flex-grow-1 overflow-auto" id="userList">
+            @for (user of contacts(); track user.id) {
+                <div (click)="selectUser(user)">User: {{ user.name }} (ID: {{ user.id }}), group: {{ user.group_id }}</div>
+            }
+        </div>
+    </div>
+</div>
